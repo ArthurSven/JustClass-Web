@@ -32,9 +32,6 @@ export class RegisterComponent implements OnInit {
 
   }
 
-  ngAfterViewInit() { // Use AfterViewInit
-    // You can now safely access this.toast here. It will be defined.
-  }
 
   onRegister() {
     if (this.registerForm.valid) {
@@ -55,7 +52,7 @@ export class RegisterComponent implements OnInit {
         },
         error: (error) => {
           console.error('Registration failed', error);
-          this.message = 'There was an error creating your account:' + error.message;
+          this.message = 'Error: ' + error.message;
           this.alertClass = 'bg-red-600';
         }
       });
