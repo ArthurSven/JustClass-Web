@@ -35,7 +35,7 @@
           class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
         />
         <div *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('username')?.touched)" class="text-red-500 text-sm">
-          <div *ngIf="loginForm.get('password')?.errors?.['required']">Username is required</div>
+          <div *ngIf="loginForm.get('password')?.errors?.['required']">Password is required</div>
         </div>
       </div>
 

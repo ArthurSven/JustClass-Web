@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Router, RouterOutlet} from '@angular/router';
 import {AuthService} from "./services/auth.service";
 
@@ -9,11 +9,13 @@ import {AuthService} from "./services/auth.service";
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+
   title = 'just-class';
 
   constructor(private authService: AuthService, private router: Router) {
     this.redirectUser();
+
   }
 
   redirectUser() {
@@ -22,5 +24,9 @@ export class AppComponent {
     } else {
       this.router.navigate(['/']); // Redirect to login page if not logged in
     }
+  }
+
+  ngOnInit(): void {
+
   }
 }
