@@ -6,27 +6,27 @@
     <!-- First Row: Class Name and Price -->
     <div class="flex flex-wrap -mx-3 mb-6">
       <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-classname">
-          Class name
+        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-firstname">
+          Firstname
         </label>
         <input
           class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-          id="grid-classname"
-          formControlName="classname"
+          id="grid-firstname"
+          formControlName="firstname"
           type="text"
-          placeholder="Classname"
+          placeholder="Firstname"
         />
       </div>
       <div class="w-full md:w-1/2 px-3">
-        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-price">
-          Price
+        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-lastname">
+          Lastname
         </label>
         <input
           class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-          id="grid-price"
-          type="number"
-          formControlName="price"
-          placeholder="Price (MWK)"
+          id="grid-lastname"
+          type="text"
+          formControlName="lastname"
+          placeholder="Lastname"
         />
       </div>
     </div>
@@ -34,62 +34,48 @@
     <!-- Second Row: Start Date, End Date, and Class Level -->
     <div class="flex flex-wrap -mx-3 mb-2">
       <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
-          Start Date
+        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-email">
+          Email
         </label>
         <input
           class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-          id="grid-city"
-          type="date"
-          formControlName="startdate"
-          placeholder=""
+          id="grid-email"
+          type="email"
+          formControlName="email"
+          placeholder="Email"
         />
       </div>
       <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
-          End date
+        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-number">
+          Phone number
         </label>
         <input
           class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-          id="grid-zip"
-          type="date"
-          formControlName="enddate"
-          placeholder=""
+          id="grid-number"
+          type="text"
+          formControlName="phoneno"
+          placeholder="Phone Number"
         />
       </div>
       <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
-          Class level
+        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-date">
+          Date Joined
         </label>
-        <div class="relative">
-          <select
-            formControlName="level"
-            class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-            id="grid-state"
-          >
-            <option value="A1">A1</option>
-            <option value="A2">A2</option>
-            <option value="B1">B1</option>
-            <option value="B2">B2</option>
-            <option value="C1">C1</option>
-            <option value="C2">C2</option>
-          </select>
-          <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-              <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-            </svg>
-          </div>
-        </div>
+        <input
+          class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+          id="grid-date"
+          type="date"
+          formControlName="datejoined"
+          placeholder=""
+        />
       </div>
     </div>
 
     <!-- Submit Button -->
     <div class="flex mt-6">
       <button
-        class="bg-black w-full hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-        type="submit"
-      >
-        Create Class
+        class="bg-black w-full hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+        Create Student
       </button>
     </div>
   </form>

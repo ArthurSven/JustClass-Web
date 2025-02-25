@@ -38,7 +38,8 @@ export class CreateStudentFormComponent {
       firstname: ['', Validators.required],
       lastname: ['', Validators.required],
       email: ['', Validators.required],
-      phone: ['', Validators.required]
+      phoneno: ['', Validators.required],
+      datejoined: ['', Validators.required],
     })
   }
 
@@ -51,7 +52,7 @@ export class CreateStudentFormComponent {
         lastname: this.createStudentForm.value.lastname,
         email: this.createStudentForm.value.email,
         phoneno: this.createStudentForm.value.phoneno,
-        datejoined: currentDate,
+        datejoined: this.createStudentForm.value.datejoined,
         teacher: this.cookieService.get('username')
       }
 
