@@ -79,5 +79,6 @@ export class CreateClassFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
   }
 }

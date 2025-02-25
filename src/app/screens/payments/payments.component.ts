@@ -32,8 +32,8 @@ export class PaymentsComponent implements OnInit {
   filteredPayments: PaymentResponse[] = []; // Array to store filtered results
   searchTerm: string = '';
 
-  getStudents(): void {
-    this.paymentService.getStudentsByTeacher().subscribe({
+  getPayments(): void {
+    this.paymentService.getPaymentsByTeacher().subscribe({
       next: (data) => this.payments = data,
       error: (err) => console.error('Error fetching classes:', err)
     })
@@ -55,7 +55,7 @@ export class PaymentsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getStudents()
+    this.getPayments()
   }
 
 

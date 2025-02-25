@@ -41,10 +41,10 @@ export class PaymentService implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.getStudentsByTeacher()
+    this.getPaymentsByTeacher()
   }
 
-  getStudentsByTeacher() : Observable<PaymentResponse[]> {
+  getPaymentsByTeacher() : Observable<PaymentResponse[]> {
     const teachername = this.cookieService.get('username');
 
     if (!teachername) {
