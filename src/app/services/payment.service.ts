@@ -13,6 +13,7 @@ export interface PaymentResponse {
   amount: number;
   student: string;
   teacher: string;
+  message: string;
 }
 
 export interface PaymentRequest {
@@ -60,8 +61,8 @@ export class PaymentService implements OnInit {
     );
   }
 
-  createStudent(student: StudentRequest) : Observable<StudentResponse> {
-    return this.http.post<StudentResponse>(`${this.apiUrl}`, student).pipe(
+  createPayment(payment: PaymentRequest) : Observable<PaymentResponse> {
+    return this.http.post<PaymentResponse>(`${this.apiUrl}`, payment).pipe(
       catchError(this.studentError)
     )
   }
